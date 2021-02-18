@@ -11,7 +11,7 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:background="@color/black"
+        android:background="@color/blueBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -114,6 +114,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_margin="16dp"
@@ -124,7 +125,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnDatePicker"
-            app:layout_constraintVertical_bias="0.348">
+            app:layout_constraintVertical_bias="0.35">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -151,6 +152,21 @@
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/ageInDayBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:backgroundTint="@color/blueBtn"
+            android:drawableLeft="@drawable/ic_day"
+            android:text="Age in day"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            app:layout_constraintVertical_bias="0.584" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

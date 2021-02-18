@@ -1,6 +1,7 @@
 package com.example.agetominutescalculator
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -21,7 +22,12 @@ class MainActivity : AppCompatActivity() {
 
         btnDatePicker.setOnClickListener { view ->
             clickedDatePicker(view)
+        }
 
+        ageInDayBtn.setOnClickListener {
+            Intent(this, AgeInDay::class.java).also {
+                startActivity(it)
+            }
         }
     }
 
@@ -39,6 +45,7 @@ class MainActivity : AppCompatActivity() {
 
             tvSelectedDate.text = selectedDate
 
+            //Date pattern
             val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
 
             //Convert string date to Date format
